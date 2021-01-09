@@ -1,6 +1,7 @@
 package sort;
 
-import utils.SortTestUtils;
+import utils.ArrayGenerator;
+import utils.SortTest;
 import utils.Utils;
 
 public class SelectionSort {
@@ -24,6 +25,10 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        SortTestUtils.testSort(SelectionSort.class.getSimpleName());
+        int[] dataSize = {10000, 100000};
+        for (int n : dataSize) {
+            Integer[] arr = ArrayGenerator.generateRandomIntArray(n, n);
+            SortTest.test("SelectionSort", arr);
+        }
     }
 }
