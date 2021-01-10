@@ -1,7 +1,7 @@
 package utils;
 
-import sort.InsertionSort;
-import sort.SelectionSort;
+import algorithm.sort.InsertionSort;
+import algorithm.sort.SelectionSort;
 
 public class SortTest {
     private SortTest() {
@@ -34,7 +34,7 @@ public class SortTest {
         }
         long costTime = System.currentTimeMillis() - startTime;
         if (!isSorted(data)) {
-            throw new RuntimeException(sortName + " sort failed");
+            throw new RuntimeException(sortName + " algorithm.sort failed");
         }
         System.out.println(String.format("%s: n = %d, costTime: %fS", sortName, data.length, costTime / 1000.0f));
     }

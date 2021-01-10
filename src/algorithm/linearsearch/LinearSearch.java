@@ -1,4 +1,4 @@
-package linearsearch;
+package algorithm.linearsearch;
 
 import utils.ArrayGenerator;
 

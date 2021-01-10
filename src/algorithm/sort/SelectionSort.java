@@ -1,4 +1,4 @@
-package sort;
+package algorithm.sort;
 
 import utils.ArrayGenerator;
 import utils.SortTest;
