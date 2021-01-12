@@ -1,7 +1,7 @@
 package leetcode.valid_parentheses;
 
-import datastructure.linear.ArrayStack;
-import datastructure.linear.Stack;
+import datastructure.linear.stack.ArrayStack;
+import datastructure.linear.stack.Stack;
 
 class Solution {
     public boolean isValid(String s) {

@@ -1,4 +1,4 @@
-package datastructure.linear;
+package datastructure.linear.array;
 
 public class Array<E> {
 

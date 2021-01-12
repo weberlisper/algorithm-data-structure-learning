@@ -1,4 +1,4 @@
-package datastructure.linear;
+package datastructure.linear.stack;
 
 public interface Stack<E> {
 
