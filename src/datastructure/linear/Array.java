@@ -13,6 +13,10 @@ public class Array<E> {
         size = 0;
     }
 
+    public Array() {
+        this(10);
+    }
+
     public int getSize() {
         return size;
     }
@@ -107,6 +111,14 @@ public class Array<E> {
             throw new IllegalStateException("Add failed! Require index >=0 && index < size");
         }
         return data[index];
+    }
+
+    public E getFirst() {
+        return get(0);
+    }
+
+    public E getLast() {
+        return get(size - 1);
     }
 
     @Override
