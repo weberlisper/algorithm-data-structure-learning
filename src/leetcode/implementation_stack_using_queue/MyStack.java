@@ -1,4 +1,4 @@
-package leetcode.implement_queue_using_stacks;
+package leetcode.implementation_stack_using_queue;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
