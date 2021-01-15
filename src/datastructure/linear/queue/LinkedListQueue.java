@@ -1,7 +1,5 @@
 package datastructure.linear.queue;
 
-import datastructure.linear.linkedlist.LinkedList;
-
 public class LinkedListQueue<E> implements Queue<E> {
     private Node head, tail;
     private int size;
