@@ -10,6 +10,7 @@ public class Solution3 {
 
         // 更小的问题的答案
         head.next = removeElements(head.next, val);
+        // 使用更小问题的结果与当前的情况求解
         return head.val == val ? head.next : head;
     }
 
