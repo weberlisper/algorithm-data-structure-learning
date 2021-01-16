@@ -1,6 +1,7 @@
 package utils;
 
 import algorithm.sort.InsertionSort;
+import algorithm.sort.MergeSort;
 import algorithm.sort.SelectionSort;
 
 public class SortTest {
@@ -30,6 +31,9 @@ public class SortTest {
                 break;
             case "InsertionSort3":
                 InsertionSort.sort3(data);
+                break;
+            case "MergeSort":
+                MergeSort.sort(data);
                 break;
         }
         long costTime = System.currentTimeMillis() - startTime;
