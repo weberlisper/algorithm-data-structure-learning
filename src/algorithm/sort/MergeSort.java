@@ -23,7 +23,7 @@ public class MergeSort {
         }
 
         // 先求解更小的问题
-        int mid = (l + r) / 2;
+        int mid = l + (r - l) / 2;
         sort(data, l, mid);
         sort(data, mid + 1, r);
 
