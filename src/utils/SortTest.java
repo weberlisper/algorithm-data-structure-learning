@@ -35,6 +35,9 @@ public class SortTest {
             case "MergeSort":
                 MergeSort.sort(data);
                 break;
+            case "MergeSort2":
+                MergeSort.sort(data);
+                break;
         }
         long costTime = System.currentTimeMillis() - startTime;
         if (!isSorted(data)) {

@@ -35,8 +35,22 @@ public class InsertionSort {
         for (int i = 0; i < data.length; i++) {
             // 第二重循环，将data[i]中的元素插入到已排好序的正确位置，不是合适的位置的元素，都往后挪一个索引
             E t = data[i]; // 待插入元素
-            int j = i; // 待插入位置
+            int j; // 待插入位置
             for (j = i; j - 1 >= 0 && t.compareTo(data[j - 1]) < 0; j--) {    // 该重循环的工作是寻找待插入的正确位置j
+                data[j] = data[j - 1];
+            }
+            data[j] = t;
+        }
+    }
+
+    // 对数组data的区间[l, r]进行排序
+    public static <E extends Comparable<E>> void sort(E[] data, int l, int r) {
+        // 第一重循环，维持循环不变量data[l ... i)中的元素都是已排好序的
+        for (int i = l; i <= r; i++) {
+            // 第二重循环，将data[i]中的元素插入到已排好序的正确位置，不是合适的位置的元素，都往后挪一个索引
+            E t = data[i]; // 待插入元素
+            int j; // 待插入位置
+            for (j = i; j - 1 >= l && t.compareTo(data[j - 1]) < 0; j--) {    // 该重循环的工作是寻找待插入的正确位置j
                 data[j] = data[j - 1];
             }
             data[j] = t;
