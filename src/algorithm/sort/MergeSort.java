@@ -13,7 +13,7 @@ public class MergeSort {
         sort(data, 0, data.length - 1, temp);
     }
 
-    // 对数组data的区间[l .. r]进行排序
+     // 对数组data的区间[l .. r]进行排序
     private static <E extends Comparable<E>> void sort(E[] data, int l, int r, E[] temp) {
         // 最简单的问题
         if (r - l <= 15) {
