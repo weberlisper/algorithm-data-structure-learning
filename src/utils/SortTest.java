@@ -1,9 +1,6 @@
 package utils;
 
-import algorithm.sort.InsertionSort;
-import algorithm.sort.MergeSort;
-import algorithm.sort.MergeSortBU;
-import algorithm.sort.SelectionSort;
+import algorithm.sort.*;
 
 public class SortTest {
     private SortTest() {
@@ -38,6 +35,15 @@ public class SortTest {
                 break;
             case "MergeSortBU":
                 MergeSortBU.sort(data);
+                break;
+            case "QuickSort":
+                QuickSort.sort(data);
+                break;
+            case "QuickSort2Ways":
+                QuickSort.sort2ways(data);
+                break;
+            case "QuickSort3Ways":
+                QuickSort.sort3ways(data);
                 break;
         }
         long costTime = System.currentTimeMillis() - startTime;
