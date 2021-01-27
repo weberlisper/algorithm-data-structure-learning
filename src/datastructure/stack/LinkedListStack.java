@@ -1,6 +1,6 @@
-package datastructure.linear.stack;
+package datastructure.stack;
 
-import datastructure.linear.linkedlist.LinkedList;
+import datastructure.linkedlist.LinkedList;
 
 public class LinkedListStack<E> implements Stack<E> {
     private final LinkedList<E> list;

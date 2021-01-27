@@ -1,4 +1,4 @@
-package datastructure.linear.queue;
+package datastructure.queue;
 
 public class LoopQueue<E> implements Queue<E> {
     private E[] data;

@@ -1,4 +1,4 @@
-package datastructure.linear.queue;
+package datastructure.queue;
 
 public class LinkedListQueue<E> implements Queue<E> {
     private Node head, tail;

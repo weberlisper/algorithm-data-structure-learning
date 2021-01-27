@@ -1,4 +1,4 @@
-package datastructure.linear.array;
+package datastructure.array;
 
 public class Array<E> {
 
@@ -11,6 +11,14 @@ public class Array<E> {
     public Array(int capacity) {
         this.data = (E[]) new Object[capacity];
         size = 0;
+    }
+
+    public Array(E[] data) {
+        if (data == null) {
+            throw new IllegalArgumentException("data cannot null");
+        }
+        this.data = data;
+        size = data.length;
     }
 
     public Array() {

@@ -1,8 +1,5 @@
-package datastructure.tree.bst;
+package datastructure.bst;
 
-import utils.ArrayGenerator;
-
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -133,7 +130,7 @@ public class BST<E extends Comparable<E>> {
         stack.push(root);
         while (!stack.isEmpty()) {
             Node curNode = stack.pop();
-            System.out.println(curNode);
+            System.out.println(curNode.e);
             if (curNode.right != null) {
                 stack.push(curNode.right);
             }
@@ -155,9 +152,9 @@ public class BST<E extends Comparable<E>> {
             return;
         }
 
-        preOrder(node.left);
+        inOrder(node.left);
         System.out.println(node.e);
-        preOrder(node.right);
+        inOrder(node.right);
     }
 
     // 中序遍历
@@ -172,8 +169,8 @@ public class BST<E extends Comparable<E>> {
             return;
         }
 
-        preOrder(node.left);
-        preOrder(node.right);
+        postOrder(node.left);
+        postOrder(node.right);
         System.out.println(node.e);
     }
 
@@ -313,7 +310,61 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        append(root, res, 0);
+        return res.toString();
+    }
+
+    // 宏观语义，添加以node为根节点的string
+    private void append(Node node, StringBuilder builder, int depth) {
+        if (node == null) {
+            builder.append(generatorDepthString(depth)).append("null").append("\n");
+            return;
+        }
+
+        builder.append(generatorDepthString(depth)).append(node.e).append("\n");
+        append(node.left, builder, depth + 1);
+        append(node.right, builder, depth + 1);
+    }
+
+    public String generatorDepthString(int depth) {
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < depth; i++) {
+            res.append("--");
+        }
+        return res.toString();
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(ArrayGenerator.generateOrderIntArray(8)));
+        Integer[] nums = new Integer[]{11, 8, 22, 4, 9, 13, 27, 12, 18, 23, 30};
+        BST<Integer> bst = new BST<>();
+        for (Integer num : nums) {
+            bst.add(num);
+        }
+        System.out.println(bst);
+
+//        bst.removeMin();
+//        System.out.println(bst);
+//        bst.removeMin();
+//        System.out.println(bst);
+
+        bst.remove(22);
+        System.out.println(bst);
+
+//        bst.preOrder();
+//
+//        System.out.println();
+//
+//        bst.preOrderNR();
+//
+//        System.out.println();
+//
+//        bst.inOrder();
+//
+//        System.out.println();
+//
+//        bst.postOrder();
     }
 }

@@ -1,15 +1,15 @@
-package datastructure.linear.stack;
+package datastructure.queue;
 
-import datastructure.linear.array.Array;
+import datastructure.array.Array;
 
-public class ArrayStack<E> implements Stack<E> {
+public class ArrayQueue<E> implements Queue<E> {
     private final Array<E> array;
 
-    public ArrayStack(int capacity) {
+    public ArrayQueue(int capacity) {
         array = new Array<>(capacity);
     }
 
-    public ArrayStack() {
+    public ArrayQueue() {
         array = new Array<>();
     }
 
@@ -24,37 +24,31 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     @Override
-    public void push(E e) {
+    public void enqueue(E e) {
         array.addLast(e);
     }
 
     @Override
-    public E pop() {
+    public E dequeue() {
         return array.removeLast();
     }
 
     @Override
-    public E peek() {
-        return array.getLast();
-    }
-
-    public int getCapacity() {
-        return array.getCapacity();
+    public E getFront() {
+        return array.getFirst();
     }
 
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append("Stack ").append('[');
+        res.append("ArrayQueue ").append("front [");
         for (int i = 0; i < array.getSize(); i++) {
             res.append(array.get(i));
             if (i != array.getSize() - 1) {
                 res.append(", ");
             }
         }
-        res.append("] top");
+        res.append("] tail");
         return res.toString();
     }
-
-
 }

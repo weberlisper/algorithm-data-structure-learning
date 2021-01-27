@@ -1,4 +1,4 @@
-package datastructure.linear.linkedlist;
+package datastructure.linkedlist;
 
 public class LinkedList<E> {
     /**

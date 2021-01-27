@@ -45,6 +45,9 @@ public class SortTest {
             case "QuickSort3Ways":
                 QuickSort.sort3ways(data);
                 break;
+            case "HeapSort":
+                HeapSort.sort(data);
+                break;
         }
         long costTime = System.currentTimeMillis() - startTime;
         if (!isSorted(data)) {

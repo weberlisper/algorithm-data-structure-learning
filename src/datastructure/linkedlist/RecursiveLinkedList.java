@@ -1,4 +1,4 @@
-package datastructure.linear.linkedlist;
+package datastructure.linkedlist;
 
 import com.sun.tools.javac.util.Pair;
 
