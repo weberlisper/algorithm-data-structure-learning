@@ -48,6 +48,9 @@ public class SortTest {
             case "HeapSort":
                 HeapSort.sort(data);
                 break;
+            case "BubbleSort":
+                BubbleSort.sort(data);
+                break;
         }
         long costTime = System.currentTimeMillis() - startTime;
         if (!isSorted(data)) {
